@@ -1,0 +1,15 @@
+server:
+  port: 9292
+
+spring:
+  application:
+    name: API-GATEWAY
+
+zuul:
+    routes:
+      library-service:
+        url: http://localhost:8085
+      user-service:
+        url: http://localhost:8090
+      book-service:
+        url: http://localhost:8095
